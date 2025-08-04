@@ -44,6 +44,10 @@ body,
     margin: 0px;
 }
 
+body{
+    background-image: url('./assets/images/noise.svg');
+}
+
 .header {
   position: fixed;
   top: -100px; 
@@ -614,6 +618,7 @@ body,
     display: flex;
     flex-direction: column;
     gap: 16px;
+    background-color: white;
 }
 
 .accordian-title-container {
@@ -1146,6 +1151,7 @@ body,
     border: 1px solid #CFD1D4;
     padding: 20px;
     margin-top: 56px;
+    background-color: white;
 }
 
 .resources-item {
