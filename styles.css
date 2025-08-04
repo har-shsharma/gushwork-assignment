@@ -1,0 +1,2196 @@
+/* mobile base css  */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.zoom-preview {
+  position: absolute;
+  top: 30%;
+  left:50%;
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 200%; 
+  background-position: center;
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+  z-index: 999;
+  border-radius: 12px;
+}
+
+.magnifier-glass {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #B1B1B1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 9999;
+  backdrop-filter: blur(2px)
+}
+
+
+
+body,
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+  position: fixed;
+  top: -100px; 
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+}
+
+.header.sticky-visible {
+  top: 0;
+}
+
+
+.header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #262A2E;
+}
+
+.hamburger {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 16px;
+    width: 30px;
+}
+
+.header-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    display: none;
+}
+
+.header-mobile-links {
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    top: 78px;
+    align-items: center;
+    gap: 20px;
+    right: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: none;
+}
+
+.show{
+    display:flex;
+}
+
+.drop-down {
+    display: flex;
+}
+
+.header-links .drop-down {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-contact-btn {
+    background: #2B3990;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: white;
+    border:none;
+}
+
+.hero-section {
+    border-top: 1px solid #E1E3E8;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.breadcrumb-nav {
+    display: flex;
+    gap: 8px;
+    height: 20px;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.prev-nav-link {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #4D545C;
+}
+
+.curr-nav-link {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: black;
+}
+
+.hero-content {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certification-section {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.certificate {
+    width: 142px;
+    height: 32px;
+    background: #F7F8F9;
+    border: 1px solid #E1E3E8;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.certificate-text {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #4B5563;
+}
+
+.hero-main-heading {
+    font-family: Urbanist;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: black;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.features-section-first {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.features-li {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: #0D0D0D;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 24px;
+}
+
+.price-range-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 24px;
+}
+
+.price-range-mobile {
+    width: 100%;
+    display: block;
+}
+
+.price-range-tab {
+    display: none;
+}
+
+.price-range-outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.price-range-inner-container {
+    padding: 16px;
+    border: 1px solid #CFD1D4;
+    background: white;
+    border-radius: 10px;
+}
+
+.price-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.price-range-text {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #6A7077;
+}
+
+.price-amount-text {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: -0.6%;
+    color: black;
+}
+
+.order-details-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-item {
+    background-color: #FEF3C7;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #92400E;
+}
+
+.gray {
+    background: #F3F4F6;
+    color: #0D0D0D;
+}
+
+.CTA-buttons-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 56px;
+}
+
+.CTA-buttons-section button {
+    border-radius: 12px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+}
+
+.quote-btn {
+    background: #2B3990;
+    color: white;
+    border: none;
+}
+
+.tech-specs-btn {
+    background: white;
+    border: 1px solid #2B3990;
+    color: #262A2E;
+}
+
+.tech-specs-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+.brand-banner-section p {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    text-align: center;
+    color: #878B94;
+}
+
+.brand-banner-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.euroflex-strip {
+    display: flex;
+    justify-content: space-between;
+}
+
+.euroflex-logo-tab {
+    display: none;
+}
+
+.euroflex-logo-screen {
+    display: none;
+}
+
+.euroflex-logo-big-screen {
+    display: none;
+}
+
+
+
+.technical-specification-section {
+    background: #111827;
+    padding: 48px 16px;
+}
+
+.tech-heading-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-heading-container .heading-text {
+    font-family: Urbanist;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: white;
+}
+
+.tech-heading-container .text-content {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: #FFFFFFCC;
+}
+
+.tech-table-container {
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 48px;
+    border: 1px solid #374151;
+}
+
+.tech-spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.tech-spec-table thead {
+    background-color: #374151;
+}
+
+.tech-spec-table th {
+    padding: 12px 24px;
+    width: 50%;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #FFFFFF;
+}
+
+.tech-spec-table td {
+    padding: 16px 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: left;
+    background: #1F2937;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    border-bottom: 1px solid #374151;
+}
+
+.download-datasheet-btn {
+    margin-top: 48px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    border: 1px solid #FFFFFF;
+    background: transparent;
+    width: 100%;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: white;
+}
+
+
+.features-section {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 48px;
+}
+
+.features-heading {
+    margin-top: 49px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.features-heading h3 {
+    font-family: Urbanist;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #0D0D0D;
+}
+
+.features-heading p {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: #6A7077;
+}
+
+.features-container {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.feature-item {
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #CFD1D4;
+    background: white;
+}
+
+.feature-heading {
+    font-family: Urbanist;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #0D0D0D;
+    margin-top: 16px;
+}
+
+.feature-text {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #535A61;
+    margin-top: 16px;
+}
+
+.req-quote-btn {
+    width: 174px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: white;
+    background: #2B3990;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    margin-top: 32px;
+}
+
+.faq-section {
+    padding: 48px 16px;
+    border-top: 1px solid #E1E3E8;
+    border-bottom: 1px solid #E1E3E8;
+}
+
+.faq-heading {
+    font-family: Urbanist;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #111827;
+}
+
+.faq-heading p {
+    color: #2B3990;
+    display: inline;
+}
+
+.faq-accordian-container {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordian-item {
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #E1E3E8;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordian-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordian-title {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: black;
+}
+
+.accordian-body {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: #535A61;
+}
+
+.req-catalogue-container {
+    padding: 20px;
+    border: 1px solid #CFD1D4;
+    background: #F7F8F9;
+    border-radius: 10px;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+}
+
+.req-catalogue-heading {
+    font-family: Urbanist;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 26px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #0D0D0D;
+}
+
+.req-catalogue-content {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: #262A2E;
+    margin-top: 12px;
+}
+
+.req-catalogue-container input {
+    border-radius: 8px;
+    background: white;
+    padding: 10px;
+    padding-left: 12px;
+    border: 1px solid #E1E3E8;
+    margin-top: 20px;
+}
+
+.req-catalogue-container input::placeholder {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #959BA4;
+}
+
+.req-catalogue-container button {
+    margin-top: 12px;
+    background: #2B3990;
+    border-radius: 10px;
+    border: none;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+.versatile-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #E1E3E8;
+}
+
+.versatile-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.versatile-text-container h5 {
+    font-family: Urbanist;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #0D0D0D;
+}
+
+.versatile-text-container p {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #4D545C;
+}
+
+.versatile-nav-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.swiper-container {
+    margin-top: 48px;
+    display: flex;
+    overflow: scroll;
+    gap: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    scrollbar-width: none;
+}
+
+.swiper-item {
+    width: 320px;
+    height: 320px;
+    border-radius: 24.38px;
+    backdrop-filter: blur(6.1px);
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.579217) 40.23%, rgba(0, 0, 0, 0.8) 75.96%),
+        url('./assets/images/worker-mobile.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.swiper-item-text-container {
+    position: absolute;
+    bottom: 24.38px;
+    left: 18.29px;
+    display: flex;
+    flex-direction: column;
+    gap: 9.14px;
+    width: 283px;
+}
+
+.swiper-item-text-heading {
+    font-family: Urbanist;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 19.81px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.swiper-item-text-content {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12.19px;
+    line-height: 18.29px;
+    letter-spacing: -0.6%;
+    color: #FFFFFFCC;
+}
+
+
+.hdpe-section {
+    padding: 48px 16px;
+    border-bottom: 1px solid #E1E3E8;
+}
+
+.hdpe-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.hdpe-text-heading {
+    font-family: Urbanist;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: center;
+    color: black;
+}
+
+.hdpe-text-content {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #4D545C;
+}
+
+.hdpe-card {
+    margin-top: 56px;
+    background: #FFFFFF;
+    border: 1px solid #CFD1D4;
+    border-radius: 20px;
+    padding: 16px;
+}
+
+.hdpe-card-chip {
+    background: #2B3990;
+    border-radius: 32px;
+    padding: 8px 16px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+.hdpe-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.hdpe-card-heading {
+    font-family: Urbanist;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 28px;
+    line-height: 160%;
+    letter-spacing: -0.6%;
+    color: #0D0D0D;
+}
+
+.hdpe-card-content {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #4D545C;
+}
+
+.hdpe-card-list-container {
+    margin-top: 16px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hdpe-card-list-text {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #0D0D0D;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hdpe-image {
+    border-radius: 16px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.hdpe-nav-buttons {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hdpe-nav-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid #CFD1D4;
+    border-radius: 32px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    text-align: center;
+    vertical-align: middle;
+    color: #0D0D0D;
+    white-space: nowrap;
+    background: white;
+}
+
+.line {
+    background-color: #CFD1D4;
+    height: 1px;
+    width: 100%;
+}
+
+
+.performance-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #E1E3E8;
+}
+
+.performance-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.performance-swiper-container {
+    margin-top: 56px;
+    overflow: scroll;
+    display: flex;
+    scrollbar-width: none;
+    gap: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.performance-swiper-item {
+    padding: 20px;
+    border-radius: 24px;
+    background: #F7F8F9;
+    border: 1.5px solid #E1E3E8;
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.performance-swiper-text-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    gap: 16px;
+}
+
+.performance-swiper-heading {
+    font-family: Urbanist;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #0D0D0D;
+}
+
+.performance-swiper-content {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #535A61;
+}
+
+.performance-profile {
+    margin-top: 40px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.circle {
+    background: #E1E3E8;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+}
+
+.performance-profile-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.performance-profile-heading {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #0D0D0D;
+}
+
+.performance-profile-content {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: #535A61;
+}
+
+.solutions-section {
+    padding: 48px 16px;
+    border-bottom: 1px solid #E1E3E8;
+}
+
+.solutions-cards-container {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.solutions-cards-item {
+    padding: 24px;
+    background: white;
+    border: 1.25px solid #CFD1D4;
+    border-radius: 20px;
+}
+
+.solutions-cards-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.solutions-cards-heading {
+    font-family: Urbanist;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #0D0D0D;
+}
+
+.solutions-cards-content {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #4D545C;
+}
+
+.solutions-image {
+    width: 100%;
+    border-radius: 16px;
+    margin-top: 24px;
+}
+
+.solutions-btn {
+    margin-top: 20px;
+    border: 1px solid #2B39903D;
+    background: #2B39900D;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #2B3990;
+    border-radius: 12px;
+}
+
+.phoneCallBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-highlight {
+    color: #2B3990;
+}
+
+.resource-download-section {
+    padding: 48px 16px;
+    border-bottom: 1px solid #E1E3E8;
+}
+
+.resources-container {
+    border-radius: 10px;
+    border: 1px solid #CFD1D4;
+    padding: 20px;
+    margin-top: 56px;
+}
+
+.resources-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.resources-heading {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: #0D0D0D;
+}
+
+.resources-sub-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.resources-download-text {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: #2B3990;
+}
+
+.hr-line {
+    border: none;
+    height: 1px;
+    background-color: #E1E3E8;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+.contact-us-section {
+    padding: 48px 16px;
+    border-bottom: 1px solid #E1E3E8;
+}
+
+.contact-us-container {
+    border-radius: 20px;
+    background: #2B3990;
+    padding: 24px;
+}
+
+.contact-us-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-us-heading {
+    font-family: Urbanist;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: white;
+}
+
+.contact-us-sub-heading {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: -0.6%;
+    color: #FFFFFFCC;
+}
+
+.custom-hr {
+    border: none;
+    height: 1.5px;
+    background-color: #FFFFFF33;
+    margin-top: 26px;
+}
+
+.contact-form {
+    background-color: #F7F8F9;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #262A2E;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+}
+
+.form-input {
+    padding: 10px 10px 10px 12px;
+    border: 1px solid #E1E3E8;
+    border-radius: 8px;
+    outline: none;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+}
+
+.phone-number {
+    padding-left: 12px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.phone-input-group {
+    display: flex;
+    border: 1px solid #E1E3E8;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.country-code {
+    padding: 10px;
+    border: none;
+    border-right: 1px solid #E1E3E8;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    outline: none;
+    appearance: none;
+}
+
+.form-button {
+    background-color: #262A2E;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    cursor: pointer;
+}
+
+
+.footer-main {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 48px;
+}
+
+.footer-logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #CFD1D4;
+    border-radius: 16px;
+}
+
+.footer-logo-section p {
+    font-family: Urbanist;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #0D0D0D;
+}
+
+.blue-highlight {
+    color: #2B3990;
+}
+
+.footer-links {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px
+}
+
+.footer-link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-heading {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.6%;
+    color: #0D0D0D;
+}
+
+.footer-body {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    color: #535A61;
+}
+
+.contact-info-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-info-text {
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.6%;
+    color: #535A61;
+}
+
+.custom-footer-hr {
+    border: none;
+    height: 1px;
+    background-color: #E1E3E8;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.copyright-container {
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-top: 1px solid #E1E3E8;
+    position: absolute;
+    left: 0;
+    margin-top: 49px;
+    width: 100%;
+}
+
+.copyright-links-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright-text {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: #535A61;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.showOnScreen {
+    display: none;
+}
+
+
+
+/* tab css  */
+
+@media(min-width : 768px) {
+
+    .header {
+        padding: 16px 48px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .header-links {
+        display: flex;
+    }
+
+    .header-mobile-links{
+        display: none;
+    }
+
+    .hero-section {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .hero-content {
+        margin-top: 48px;
+    }
+
+    .hero-main-heading {
+        font-family: Urbanist;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 56px;
+        line-height: 120%;
+        letter-spacing: 0px;
+    }
+
+    .price-range-mobile {
+        display: none !important;
+    }
+
+    .order-details-section {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .price-range-outer-container {
+        gap: 20px;
+    }
+
+    .CTA-buttons-section {
+        flex-direction: row;
+    }
+
+    .quote-btn,
+    .tech-specs-btn {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .price-range-tab {
+        display: block;
+    }
+
+    .brand-banner-section {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .euroflex-logo-tab {
+        display: block;
+    }
+
+    .euroflex-logo {
+        width: 121.84724426269531px;
+        height: 32.10804748535156px;
+    }
+
+    .technical-specification-section {
+        padding: 80px 48px;
+    }
+
+    .tech-heading-container .heading-text {
+        font-family: Urbanist;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 48px;
+        line-height: 120%;
+        letter-spacing: 0px;
+    }
+
+    .tech-heading-container .text-content {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: -0.6%;
+    }
+
+    .tech-table-container {
+        margin-top: 56px;
+    }
+
+    .tech-spec-table th {
+        width: unset;
+    }
+
+    .download-datasheet-btn {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 56px;
+        max-width: 325px;
+    }
+
+    .features-section {
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-bottom: 80px;
+    }
+
+    .features-heading {
+        margin-top: 80px;
+    }
+
+    .features-heading h3 {
+        font-family: Urbanist;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 44px;
+        line-height: 120%;
+        letter-spacing: 0px;
+    }
+
+    .features-heading p {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: -0.6%;
+    }
+
+    .features-container {
+        margin-top: 56px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .feature-item {
+        max-width: 48%;
+    }
+
+    .req-quote-btn {
+        margin-top: 56px;
+    }
+
+    .faq-section {
+        padding: 80px 48px;
+    }
+
+    .faq-heading {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 44px;
+        line-height: 120%;
+        letter-spacing: 0px;
+    }
+
+    .faq-accordian-container {
+        margin-top: 56px;
+    }
+
+    .flex-col {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .req-catalogue-container input {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.6%;
+        width: 74%;
+    }
+
+    .req-catalogue-container button {
+        margin-top: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .versatile-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .versatile-text-container {
+        padding-left: 48px;
+        padding-right: 0;
+    }
+
+    .versatile-text-container h5 {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 44px;
+        line-height: 120%;
+        letter-spacing: 0px;
+    }
+
+    .versatile-text-container p {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0%;
+    }
+
+    .versatile-group {
+        display: flex;
+        align-items: center;
+    }
+
+    .versatile-nav-container {
+        gap: 16px;
+        margin: unset;
+        padding-right: 48px;
+        padding-left: 0;
+    }
+
+    .left-nav,
+    .right-nav {
+        width: 68px;
+        height: 68px;
+    }
+
+    .swiper-item {
+        width: 420px;
+        height: 420px;
+        background-size: cover;
+    }
+
+    .swiper-item-text-container {
+        bottom: 32px;
+        left: 24px;
+    }
+
+    .swiper-container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .swiper-item-text-heading {
+        font-family: Urbanist;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 26px;
+        line-height: 120%;
+        letter-spacing: 0px;
+    }
+
+    .swiper-item-text-content {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.6%;
+    }
+
+    .hdpe-section {
+        padding: 80px 48px;
+    }
+
+    .hdpe-text-heading {
+        font-family: Urbanist;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 44px;
+        line-height: 120%;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .hdpe-text-content {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+    .hdpe-card {
+        padding: 32px;
+    }
+
+    .hdpe-card-content {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.6%;
+    }
+
+    .performance-text-container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .performance-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .performance-swiper-container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .performance-swiper-item {
+        width: 420px;
+        padding: 32px;
+    }
+
+    .performance-profile {
+        margin-top: 64px;
+    }
+
+    .solutions-section {
+        padding: 80px 48px;
+    }
+
+    .req-container-tab {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .phoneCallBtn {
+        margin-top: 0 !important;
+        width: 187px;
+    }
+
+    .resource-download-section {
+        padding: 80px 48px;
+    }
+
+    .resources-item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-us-section {
+        padding: 80px 48px;
+    }
+
+    .contact-us-container {
+        padding: 56px;
+    }
+
+    .contact-us-heading {
+        font-family: Urbanist;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 48px;
+        line-height: 120%;
+        letter-spacing: 0px;
+    }
+
+    .contact-us-sub-heading {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: -0.6%;
+    }
+
+    .text-small-tab {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        margin-top: 64px;
+        padding: 32px;
+    }
+
+    .footer-logo-section {
+        padding: 32px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-logo-section p {
+        font-size: 24px;
+        max-width: 344px;
+    }
+
+    .footer-links {
+        flex-direction: row;
+    }
+
+    .footer-main {
+        padding: 80px 48px;
+    }
+
+    .footer-link-container,
+    .contact-info-text-container {
+        width: 158px;
+    }
+
+    .copyright-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .copyright-links-container {
+        gap: 12px;
+    }
+
+}
+
+
+/* small laptop screen  */
+
+@media(min-width : 1080px) {
+
+    .header {
+        padding: 16px 60px;
+    }
+
+    .hero-section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .hero-content {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 56px;
+    }
+
+    .price-range-tab {
+        flex: 1;
+        max-width: 50%;
+        margin-top: -10px;
+    }
+
+    .certification-section {
+        flex-wrap: nowrap;
+    }
+
+    .CTA-buttons-section {
+        margin-bottom: 0;
+    }
+
+    .euroflex-logo-screen {
+        display: block;
+    }
+
+    .technical-specification-section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .tech-heading-container {
+        max-width: 800px;
+    }
+
+    .features-section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .feature-item {
+        max-width: 31.6%;
+    }
+
+    .faq-section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .req-catalogue-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .flex-col {
+        flex-direction: column;
+    }
+
+    .req-catalogue-container input {
+        margin-top: 0;
+        width: unset;
+    }
+
+    .req-catalogue-container button {
+        margin-top: 0;
+    }
+
+    .versatile-text-container {
+        padding-left: 60px;
+        padding-right: 100px;
+    }
+
+    .versatile-nav-container {
+        padding-right: 60px;
+    }
+
+    .swiper-container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .hdpe-section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .hdpe-text-container {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hdpe-nav-buttons {
+        display: none;
+    }
+
+    .hdpe-screen-container {
+        display: flex;
+        align-items: center;
+        gap: 56px;
+    }
+
+    .hdpe-image {
+        margin-top: 0px;
+    }
+
+    .hdpe-card-container {
+        margin-top: 0px;
+    }
+
+    .hdpe-card-chip-container {
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hideOnScreen {
+        display: none;
+    }
+
+    .showOnScreen {
+        display: inline-block;
+    }
+
+    .hdpe-card-chip {
+        flex-shrink: 0;
+    }
+
+    .hdpe-card-chip-container .chip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        border: 1px solid #CFD1D4;
+        border-radius: 32px;
+        font-family: Inter;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.6%;
+        text-align: center;
+        vertical-align: middle;
+        color: #0D0D0D;
+        background: white;
+        flex-shrink: 0;
+    }
+
+    .performance-text-container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .performance-swiper-container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .solutions-cards-container {
+        flex-direction: row;
+    }
+
+    .solutions-section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .resource-download-section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .contact-us-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-us-section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .contact-us-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 64px;
+    }
+
+    .contact-us-text-container {
+        max-width: 50%;
+    }
+
+    .contact-form {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .footer-main {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .footer-links {
+        justify-content: space-between;
+    }
+
+    .copyright-container {
+        gap: 242px;
+    }
+
+    .copyright-links-container {
+        gap: 56px;
+    }
+}
+
+/* medium screen css  */
+
+@media(min-width : 1200px) {
+    .header {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .price-range-tab {
+        margin-left: -23px;
+    }
+
+    .features-section,
+    .faq-section,
+    .hero-section,
+    .technical-specification-section,
+    .swiper-container,
+    .hdpe-section,
+    .performance-text-container,
+    .performance-swiper-container,
+    .solutions-section,
+    .resource-download-section,
+    .contact-us-section,
+    .footer-main {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .flex-col {
+        width: 349px;
+    }
+
+    .versatile-text-container {
+        padding-left: 80px;
+    }
+
+    .versatile-nav-container {
+        padding-right: 80px;
+    }
+}
+
+/* large screen css  */
+
+@media(min-width : 1440px) {
+
+    .header {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .hero-content,
+    .breadcrumb-nav,
+    .brand-banner-section,
+    .tech-heading-container,
+    .tech-table-container,
+    .features-heading,
+    .features-container,
+    .faq-heading,
+    .faq-accordian-container,
+    .req-catalogue-container,
+    .hdpe-card,
+    .solutions-cards-container,
+    .resources-container,
+    .contact-us-container,
+    .footer-logo-section,
+    .footer-links {
+        max-width: 1240px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .versatile-group {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .euroflex-logo-big-screen {
+        display: block;
+    }
+}
